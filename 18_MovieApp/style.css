@@ -1,0 +1,169 @@
+/* Fonts 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+/*
+Variables
+*/
+:root {
+  --primary-color: #01b4e4;
+  --secondary-color: #0d253f;
+  --Tertiary-color: #90cea1;
+}
+
+/*
+Global Styles
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 1rem;
+  display: flow-root;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* global id */
+
+#logo {
+  height: 50px;
+  float: left;
+  margin-right: 15px;
+}
+/*  global classes */
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  float: right;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+.search::placeholder {
+  /* color: #7378c5; */
+  color: #ffff;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+.movie {
+  width: 300px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+
+}
+
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+}
+
+.movie-info span {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px 100px / 120px;
+  padding: 0.25rem 0.5rem;
+  font: 100;
+  font-size: large;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: rgb(0, 255, 0);
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+/* movieCard */
+.movieCard {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+
+  width: 100%;
+  margin: 1rem;
+}
+
+.movieCard img {
+  width: 65%;
+  padding: auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.infoCard {
+  font-size: 1.2rem;
+  color: rgb(209, 209, 209);
+}
+
+#Score {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  padding: 8px;
+
+  background: #fff;
+  border: 2px solid #666;
+  color: rgb(0, 0, 0);
+  background-color: var();
+  text-align: center;
+  margin-right: 10px;
+}
+
+.infoCard h3 {
+  font-size: 2.5rem;
+  color: #fff;
+}
